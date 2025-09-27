@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const title = 'My Job 2.0.0';
+const title = 'MyJob 2.0';
 </script>
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold">
+    <h1 class="text-5xl">
       {{ title }}
     </h1>
   </div>

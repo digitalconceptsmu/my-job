@@ -1,1 +1,85 @@
+@font-face {
+  font-family: 'inter-extra-bold';
+  src:
+    url('~/assets/fonts/inter-extra-bold.woff2') format('woff2'),
+    url('~/assets/fonts/inter-extra-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-sans-regular';
+  src:
+    url('~/assets/fonts/nunito-sans-regular.woff2') format('woff2'),
+    url('~/assets/fonts/nunito-sans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-sans-medium';
+  src:
+    url('~/assets/fonts/nunito-sans-medium.woff2') format('woff2'),
+    url('~/assets/fonts/nunito-sans-medium.woff.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'nunito-sans-bold';
+  src:
+    url('~/assets/fonts/nunito-sans-bold.woff2') format('woff2'),
+    url('~/assets/fonts/nunito-sans-regular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import 'tailwindcss';
+
+@theme {
+  --font-inter: 'inter-extra-bold', sans-serif;
+  --font-nunito-regular: 'nunito-sans-regular', sans-serif;
+  --font-nunito-medium: 'nunito-sans-medium', sans-serif;
+  --font-nunito-bold: 'nunito-sans-bold', sans-serif;
+
+  --color-primary-blue-600: #009eb5;
+  --color-primary-blue-950: #0b2340;
+  --color-primary-red-500: #ff3609;
+
+  --color-secondary-aqua-200: #acdedc;
+  --color-secondary-aqua-400: #6dc6cb;
+  --color-secondary-blue-400: #5caad5;
+
+  --color-accent-yellow-300: #fcca3e;
+  --color-accent-orange-500: #e98f34;
+  --color-accent-green-200: #c3d5a7;
+  --color-accent-green-400: #56b9a4;
+  --color-accent-lime-400: #bad041;
+  --color-accent-pink-500: #ea5759;
+  --color-accent-purple-500: #96a3d0;
+
+  --color-neutral-light-50: #f4f9fd;
+  --color-neutral-light-100: #f0f0f0;
+  --color-neutral-light-400: #aeaeae;
+
+  --color-neutral-dark-950: #0c0c0c;
+
+  --gradient-blue: linear-gradient(to right, var(--color-primary-blue-600), var(--color-secondary-aqua-400));
+  --gradient-orange: linear-gradient(to right, var(--color-primary-red-500), var(--color-accent-yellow-300));
+}
+
+body {
+  @apply font-nunito-regular text-primary-blue-950 bg-neutral-light-50;
+}
+
+.bg-gradient-blue {
+  background-image: var(--gradient-blue);
+}
+
+.bg-gradient-orange {
+  background-image: var(--gradient-orange);
+}
