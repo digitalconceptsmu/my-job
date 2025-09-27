@@ -10,6 +10,11 @@ export default defineNuxtConfig({
   ],
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/icon',
